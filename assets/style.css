@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.appWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    width:100%;
+    height:100vh;
+}
+.appbackground{
+    
+    width:30rem;
+    height:50rem;
+    background-color: aqua;
+    border-radius: 77px;
+}
+.blank{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchBar{
+    display: block;
+    margin: 5rem;
+    padding:0;
+}
+.locationWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.location{
+    display: block;
+}
+.degreesWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.weatherIconWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weatherIcon{
+    display: block;
+}
