@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:  monospace;
 }
 .appWrapper{
     display: flex;
@@ -15,8 +16,10 @@
     
     width:30rem;
     height:50rem;
-    background-color: aqua;
+    background-image: linear-gradient(to bottom right, #0D324D, #9FA4C4);
+    background-color: gradient;
     border-radius: 77px;
+    
 }
 .blank{
     display: flex;
@@ -27,6 +30,27 @@
     display: block;
     margin: 5rem;
     padding:0;
+    
+   
+}
+#search-bar{
+    border-radius: 10px;
+    border-style: none;
+    height:2rem;
+    width:15rem;
+    padding-left: 10px;
+    box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
+}
+#search-button{
+    border-radius: 10px;
+    border-style: none;
+    height:2rem;
+    width:4rem;
+    box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
+
+}
+.placeholder{
+    padding-left: 10px;
 }
 .locationWrapper{
     display: flex;
@@ -34,7 +58,11 @@
     justify-content: center;
 }
 .location{
-    display: block;
+    display: inline;
+    font-size: 1.5rem;
+    margin-top: -3rem;
+    text-shadow: 0 3px 10px rgb(1 1 1 / 0.5);
+    color:#9FA4C4;
 }
 .degreesWrapper{
     display: flex;
@@ -48,5 +76,90 @@
     justify-content: center;
 }
 .weatherIcon{
-    display: block;
+    display: inline;
+    text-shadow: 0 3px 10px rgb(1 1 1 / 0.5);
+    
+}
+.iconDescriptionWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.iconDescription{
+    display: inline;
+    text-shadow: 0 3px 10px rgb(1 1 1 / 0.5);
+    color:#9FA4C4;
+}
+.weatherIcon img{
+    height:15rem;
+    height: 15rem;
+    margin-bottom: -2rem;
+    
+}
+.degrees{
+    font-size: 4rem;
+    margin-bottom: -3rem;
+    text-shadow: 0 3px 10px rgb(1 1 1 / 0.5);
+    color:#9FA4C4;
+}
+.DayForecastWrapper{
+    position: absolute;
+    height:5rem;
+    width:100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:30rem;
+    height: 20rem;
+    border-radius: 50px 5px 50px 50px;
+    margin-top: 30rem;
+    box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
+}
+.one{
+    display: inline-block;
+    border-radius: 50%;
+    height: 8rem;
+    width:8rem;
+    background-color: #9FA4C4;
+
+}
+.two{
+    display: inline-block;
+    border-radius: 50%;
+    height: 6rem;
+    width:6rem;
+    background-color: #9FA4C4;
+
+}
+.two img{
+    height: 6rem;
+    width:6rem;
+}
+.three{
+    display: inline-block;
+    border-radius: 50%;
+    height: 6rem;
+    width:6rem;
+    background-color: #9FA4C4;
+
+}
+.three img{
+    height: 6rem;
+    width:6rem;
+
+}
+.four{
+    display: inline-block;
+    border-radius: 50%;
+    height: 6rem;
+    width:6rem;
+    background-color: #9FA4C4;
+
+}
+.four img{
+    height: 6rem;
+    width:6rem;
 }
