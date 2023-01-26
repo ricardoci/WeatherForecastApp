@@ -16,7 +16,7 @@
     
     width:30rem;
     height:50rem;
-    background-image: linear-gradient(to bottom right, #0D324D, #9FA4C4);
+    background-image: linear-gradient(to bottom right, #1F1C2C, #403B4A );
     background-color: gradient;
     border-radius: 77px;
     
@@ -40,6 +40,7 @@
     width:15rem;
     padding-left: 10px;
     box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
+    background-color:#9FA4C4;
 }
 #search-button{
     border-radius: 10px;
@@ -47,10 +48,17 @@
     height:2rem;
     width:4rem;
     box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
+    background-color: #9FA4C4;
 
 }
+#search-button:hover{
+    background-color: #ee6f35;
+}
+
 .placeholder{
     padding-left: 10px;
+    color: beige;
+    
 }
 .locationWrapper{
     display: flex;
@@ -108,7 +116,7 @@
     position: absolute;
     height:5rem;
     width:100%;
-    background-color: #fff;
+    background-image: linear-gradient(to bottom right, #1F1C2C, #403B4A  );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,17 +126,46 @@
     margin-top: 30rem;
     box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
 }
+.firstDescript{
+    padding-top: 10px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:beige;
+}
 .one{
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 20px 20px 20px 50px;
     height: 8rem;
     width:8rem;
     background-color: #9FA4C4;
 
 }
+.firstDayWrapper{
+    display: inline-block;
+}
+.firstDay{
+    color:beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secondDayWrapper{
+    display: inline-block;
+    
+}
+.secondDay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:beige;
+
+}
 .two{
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 20px 5px 5px 20px;
+    
     height: 6rem;
     width:6rem;
     background-color: #9FA4C4;
@@ -138,9 +175,28 @@
     height: 6rem;
     width:6rem;
 }
+.secondDescript{
+    padding-top: 10px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:beige;
+}
+.thirdDayWrapper{
+    display: inline-block;
+    
+}
+.thirdDay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:beige;
+
+}
 .three{
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 5px 20px 20px 5px;
     height: 6rem;
     width:6rem;
     background-color: #9FA4C4;
@@ -151,15 +207,44 @@
     width:6rem;
 
 }
+.thirdDescript{
+    padding-top: 10px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:beige;
+}
+.fourthDayWrapper{
+    display: inline-block;
+    
+}
+.fourthDay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:beige;
+
+}
+
 .four{
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 20px 20px 50px 20px;
     height: 6rem;
     width:6rem;
     background-color: #9FA4C4;
+    
 
 }
 .four img{
     height: 6rem;
     width:6rem;
+}
+.fourthDescript{
+    padding-top: 10px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:beige;
 }

@@ -21,7 +21,7 @@ function getWeather(event) {
     }
 
     const requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=imperial&limit=5&sort=forecast`;
-    const requestUrl3 = `https://api.openweathermap.org/data/2.5/forecast?q=${query}&appid=${apiKey}`
+    const requestUrl3 = `https://api.openweathermap.org/data/2.5/forecast?q=${query}&appid=${apiKey}&units=imperial`
     searchBar.value = '';
 
     fetch(requestUrl)
@@ -47,6 +47,7 @@ function getWeather(event) {
         .then(data => {
             console.log(data)
             forecastData = data
+            
 
             allforecastData()
             
@@ -79,10 +80,27 @@ function allWeatherData(){
    
 }
 function allforecastData(){
-    const icons = forecastData.list[0].weather[0].icon
-    const icons1 = forecastData.list[1].weather[0].icon
-    const icons2 = forecastData.list[2].weather[0].icon
-    const icons3 = forecastData.list[3].weather[0].icon
+    
+    const date = new Date(forecastData.list[5].dt_txt);
+    const datesecond = new Date(forecastData.list[13].dt_txt);
+    const datethird = new Date(forecastData.list[21].dt_txt);
+    const datefourth = new Date(forecastData.list[29].dt_txt);
+
+    const dayName = date.toLocaleDateString('default', {weekday: 'short'});
+    const dayNameSecond = datesecond.toLocaleDateString('default', {weekday: 'short'});
+    const dayNameThird = datethird.toLocaleDateString('default', {weekday: 'short'});
+    const dayNameFourth = datefourth.toLocaleDateString('default', {weekday: 'short'});
+
+    const icons = forecastData.list[5].weather[0].icon
+    const icons1 = forecastData.list[13].weather[0].icon
+    const icons2 = forecastData.list[21].weather[0].icon
+    const icons3 = forecastData.list[29].weather[0].icon
+    // weather conditions description
+
+    const firstDesc = forecastData.list[5].weather[0].description
+    const secondDesc = forecastData.list[13].weather[0].description
+    const thirdDesc = forecastData.list[21].weather[0].description
+    const fourthDesc = forecastData.list[29].weather[0].description
     
 
 
@@ -92,6 +110,16 @@ function allforecastData(){
     const iconUrl4 = `http://openweathermap.org/img/wn/${icons2}@2x.png`;
     const iconUrl5 = `http://openweathermap.org/img/wn/${icons3}@2x.png`;
 
+    firstShortendDate = document.querySelector('.firstDay')
+    secondShortendDate = document.querySelector('.secondDay')
+    thirdShortendDate = document.querySelector('.thirdDay')
+    fourthShortendDate = document.querySelector('.fourthDay')
+
+    const firstDes = document.querySelector('.firstDescript')
+    const secondDes = document.querySelector('.secondDescript')
+    const thirdDes = document.querySelector('.thirdDescript')
+    const fourthDes = document.querySelector('.fourthDescript')
+
 
 
 
@@ -99,4 +127,14 @@ function allforecastData(){
     two.innerHTML = `<img src="${iconUrl3}" alt="Weather Icon">`;
     three.innerHTML = `<img src="${iconUrl4}" alt="Weather Icon">`;
     four.innerHTML = `<img src="${iconUrl5}" alt="Weather Icon">`;
+
+    firstShortendDate.textContent = `${dayName}`
+    secondShortendDate.textContent = `${dayNameSecond}`
+    thirdShortendDate.textContent = `${dayNameThird}`
+    fourthShortendDate.textContent = `${dayNameFourth}`
+
+    firstDes.textContent = `${firstDesc}`
+    secondDes.textContent = `${secondDesc}`
+    thirdDes.textContent = `${thirdDesc}`
+    fourthDes.textContent = `${fourthDesc}`
 }
