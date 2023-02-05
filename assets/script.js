@@ -5,6 +5,10 @@ const one = document.querySelector('.one');
 const two = document.querySelector('.two');
 const three = document.querySelector('.three');
 const four = document.querySelector('.four');
+const history = document.querySelector('#history');
+const historyCard = document.querySelector('.historyCard');
+const exit = document.querySelector('#exit');
+
 
 let weatherData;
 let forecastData;
@@ -15,7 +19,10 @@ function getWeather(event) {
     event.preventDefault();
 
     let query = searchBar.value.toLowerCase();
+   
+    
 
+   
     if (!query) {
         return console.log('Please type a location');
     }
@@ -33,7 +40,8 @@ function getWeather(event) {
         })
         .then(data => {
             weatherData = data;
-            allWeatherData()
+           
+            storageData()
         }).catch(error => console.log(error));
 
 
@@ -45,18 +53,18 @@ function getWeather(event) {
             return response.json();
         })
         .then(data => {
-            console.log(data)
-            forecastData = data
             
+            forecastData = data
+            localStorage.setItem(query, query)
 
-            allforecastData()
+            daysData()
             
         }).catch(error => console.log(error));
         
 }
 
 
-function allWeatherData(){
+let storageData = function allWeatherData(){
 
     const name = weatherData.name
     const degrees = Math.floor(weatherData.main.temp);
@@ -79,7 +87,7 @@ function allWeatherData(){
    
    
 }
-function allforecastData(){
+let daysData = function allforecastData(){
     
     const date = new Date(forecastData.list[2].dt_txt);
     const datesecond = new Date(forecastData.list[10].dt_txt);
@@ -138,3 +146,85 @@ function allforecastData(){
     thirdDes.textContent = `${thirdDesc}`
     fourthDes.textContent = `${fourthDesc}`
 }
+
+// function addedHistory{
+
+
+// }
+
+history.addEventListener('click', function(){
+    historyCard.style.display = "block";
+    exit.style.display = "block";
+
+   
+
+
+})
+
+function retrievingHis() {
+    
+    let list = '';
+    let count = 0;
+    for (let i = 0; i < localStorage.length; i++) {
+      if (count >= 3) break;
+      
+      let key = localStorage.key(i);
+      let value = localStorage.getItem(key);
+      globalKey = key;
+      globalValue = value;
+    
+      list += `<form>  <input type="text"  
+      <input type="read only" id="searchHistory" onclick="hello('${value}')"  value="${value}" readonly>  </form> 
+      <button id="${key}" class="remove" onClick="historyCard">remove</button>`;
+      
+      count++;
+      
+    }
+    historyCard.innerHTML = list;
+  }
+
+
+  
+history.addEventListener('click', function(){
+    historyCard.style.display = "block";
+    exit.style.display = "block";
+
+    
+
+
+})
+
+exit.addEventListener('click', function(){
+
+    historyCard.style.display = "none";
+    exit.style.display = "none";
+      
+      
+})
+
+historyCard.addEventListener("click", function(e) {
+      
+    if(e.target.tagName === 'BUTTON') {
+      localStorage.removeItem(e.target.id);
+    
+      e.target.previousElementSibling.remove();
+      e.target.remove();
+     
+
+    }
+    
+     
+  });
+
+  function hello(value) {
+    searchBar.value = value;
+    let form = searchButton.form;
+    historyCard.style.display = "none";
+    exit.style.display = "none";
+    searchButton.click();
+    
+}
+
+
+  
+   
