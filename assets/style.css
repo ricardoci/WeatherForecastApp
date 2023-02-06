@@ -89,12 +89,12 @@
     position: absolute;
     width:30rem;
     height:20rem;
-    background-color: #ee6f35;
+    background-image: linear-gradient(to bottom right, #1F1C2C, #403B4A  );
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 50px 50px 50px 20px;
     box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
     display: none;
     
@@ -165,7 +165,7 @@
     justify-content: center;
     width:30rem;
     height: 20rem;
-    border-radius: 50px 5px 50px 50px;
+    border-radius: 50px 20px 50px 50px;
     margin-top: 30rem;
     box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
 }
@@ -303,15 +303,19 @@ button.remove{
     justify-content: center;
     margin: auto;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     border-radius: 10px;
     border-style: none;
-    height:2rem;
-    width:5rem;
+    height:1rem;
+    width:4rem;
     box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
     background-color: #9FA4C4;
     cursor: pointer;
     padding: 0 5px 0 5px;
 
+}
+button.remove:hover{
+background-color:#403B4A;
 }
 #exit{
     position: absolute;
@@ -327,9 +331,14 @@ button.remove{
     height:2rem;
     width:5rem;
     box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
-    background-color: #9FA4C4;
+    background-color: #ee6f35;
     cursor: pointer;
     padding: 0 5px 0 5px;
+    
+}
+#exit:hover{
+   background-color:#9FA4C4;
+
 }
 
 .exitWapper{
@@ -345,10 +354,23 @@ button.remove{
     justify-content: center;
 }
 #searchHistory{
+   
     cursor: pointer;
     width: auto;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    border-style: none;
+    text-align: center;
+    background-color: #ee6f35;
+
+}
+#searchHistory:hover{
+    background-color: #9FA4C4;
+}
+.historyCard form{
+    margin-top: 1rem;
+    
 }
