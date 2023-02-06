@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #1a1a1a;
 }
 .searchBar{
     display: block;
@@ -41,7 +42,12 @@
     padding-left: 10px;
     box-shadow: 0 3px 10px rgb(1 1 1 / 0.9);
     background-color:#9FA4C4;
+    color:#1F1C2C;
     
+    
+}
+#search-bar::placeholder{
+    color: #1a1a1a;
 }
 #search-button{
     border-radius: 10px;
@@ -60,7 +66,7 @@
 
 .placeholder{
     padding-left: 10px;
-    color: beige;
+    color:#1F1C2C;
     
 }
 .historyBtn{
