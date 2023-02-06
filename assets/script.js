@@ -89,26 +89,26 @@ let storageData = function allWeatherData(){
 }
 let daysData = function allforecastData(){
     
-    const date = new Date(forecastData.list[4].dt_txt);
-    const datesecond = new Date(forecastData.list[6].dt_txt);
-    const datethird = new Date(forecastData.list[20].dt_txt);
-    const datefourth = new Date(forecastData.list[28].dt_txt);
+    const date = new Date(forecastData.list[7].dt_txt);
+    const datesecond = new Date(forecastData.list[10].dt_txt);
+    const datethird = new Date(forecastData.list[24].dt_txt);
+    const datefourth = new Date(forecastData.list[30].dt_txt);
 
     const dayName = date.toLocaleDateString('default', {weekday: 'short'});
     const dayNameSecond = datesecond.toLocaleDateString('default', {weekday: 'short'});
     const dayNameThird = datethird.toLocaleDateString('default', {weekday: 'short'});
     const dayNameFourth = datefourth.toLocaleDateString('default', {weekday: 'short'});
 
-    const icons = forecastData.list[4].weather[0].icon
-    const icons1 = forecastData.list[6].weather[0].icon
-    const icons2 = forecastData.list[20].weather[0].icon
-    const icons3 = forecastData.list[28].weather[0].icon
+    const icons = forecastData.list[7].weather[0].icon
+    const icons1 = forecastData.list[10].weather[0].icon
+    const icons2 = forecastData.list[24].weather[0].icon
+    const icons3 = forecastData.list[30].weather[0].icon
     // weather conditions description
 
-    const firstDesc = forecastData.list[4].weather[0].description
-    const secondDesc = forecastData.list[6].weather[0].description
-    const thirdDesc = forecastData.list[20].weather[0].description
-    const fourthDesc = forecastData.list[28].weather[0].description
+    const firstDesc = forecastData.list[7].weather[0].description
+    const secondDesc = forecastData.list[10].weather[0].description
+    const thirdDesc = forecastData.list[24].weather[0].description
+    const fourthDesc = forecastData.list[30].weather[0].description
     
 
 
