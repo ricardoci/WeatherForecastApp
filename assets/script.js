@@ -53,7 +53,7 @@ function getWeather(event) {
             return response.json();
         })
         .then(data => {
-            console.log(data)
+            
             forecastData = data
             localStorage.setItem(query, query)
 
