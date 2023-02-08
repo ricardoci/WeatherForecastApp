@@ -89,26 +89,26 @@ let storageData = function allWeatherData(){
 }
 let daysData = function allforecastData(){
     
-    const date = new Date(forecastData.list[3].dt_txt);
-    const datesecond = new Date(forecastData.list[7].dt_txt);
-    const datethird = new Date(forecastData.list[17].dt_txt);
-    const datefourth = new Date(forecastData.list[26].dt_txt);
+    const date = new Date(forecastData.list[5].dt_txt);
+    const datesecond = new Date(forecastData.list[13].dt_txt);
+    const datethird = new Date(forecastData.list[21].dt_txt);
+    const datefourth = new Date(forecastData.list[29].dt_txt);
 
     const dayName = date.toLocaleDateString('default', {weekday: 'short'});
     const dayNameSecond = datesecond.toLocaleDateString('default', {weekday: 'short'});
     const dayNameThird = datethird.toLocaleDateString('default', {weekday: 'short'});
     const dayNameFourth = datefourth.toLocaleDateString('default', {weekday: 'short'});
 
-    const icons = forecastData.list[3].weather[0].icon
-    const icons1 = forecastData.list[7].weather[0].icon
-    const icons2 = forecastData.list[17].weather[0].icon
-    const icons3 = forecastData.list[26].weather[0].icon
+    const icons = forecastData.list[5].weather[0].icon
+    const icons1 = forecastData.list[13].weather[0].icon
+    const icons2 = forecastData.list[21].weather[0].icon
+    const icons3 = forecastData.list[29].weather[0].icon
     // weather conditions description
 
-    const firstDesc = forecastData.list[3].weather[0].description
-    const secondDesc = forecastData.list[7].weather[0].description
-    const thirdDesc = forecastData.list[17].weather[0].description
-    const fourthDesc = forecastData.list[26].weather[0].description
+    const firstDesc = forecastData.list[5].weather[0].description
+    const secondDesc = forecastData.list[13].weather[0].description
+    const thirdDesc = forecastData.list[21].weather[0].description
+    const fourthDesc = forecastData.list[29].weather[0].description
     
 
 
@@ -196,11 +196,15 @@ history.addEventListener('click', function(){
 
 exit.addEventListener('click', function(){
 
+    
     historyCard.style.display = "none";
+    
     exit.style.display = "none";
       
-      
-})
+  
+
+
+});
 
 historyCard.addEventListener("click", function(e) {
       
